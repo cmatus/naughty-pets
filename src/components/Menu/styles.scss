@@ -1,0 +1,23 @@
+.menu
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+    .menu-item
+    {
+        cursor: pointer;
+    }
+
+    .menu-item:hover
+    {
+        color: white;
+        font-weight: 400;
+        text-decoration: underline;
+    }
+
+    .menu-item:not(:last-child)
+    {
+        padding-right: 20px;
+    }
