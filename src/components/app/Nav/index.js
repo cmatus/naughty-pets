@@ -1,6 +1,6 @@
 import Menu from "../../Menu";
 import Logo from "../../Logo";
-import Cart from "../../Cart";
+import CartButton from "../../CartDisplay";
 
 import "./styles.scss";
 
@@ -12,7 +12,7 @@ const Nav = () => {
       </div>
       <div className="nav-right">
         <Logo />
-        <Cart />
+        <CartButton />
       </div>
     </div>
   );

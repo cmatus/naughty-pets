@@ -1,14 +1,21 @@
-import MenuItem from "./item";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
+import DataContext from "../../context/DataContext";
 import "./styles.scss";
-import category from "../../data/category";
 
 const Menu = () => {
+  const { categories } = useContext(DataContext);
+
   return (
     <div className="menu">
-      <MenuItem index="0" text={"Home"} />
-      {category.map((item) => (
-        <MenuItem index={item.id} text={item.name} />
+      <div className="menu-item">
+        <Link to="/">Home</Link>
+      </div>
+      {categories.map((category, index) => (
+        <div key={index} className="menu-item">
+          <Link to={`/category/${category.id}`}>{category.name}</Link>
+        </div>
       ))}
     </div>
   );

@@ -2,8 +2,8 @@ import "./styles.scss";
 
 const Cover = () => {
   return (
-    <div className="cover">
-      <div className="cover-left-text">
+    <div className="cover animate__animated animate__fadeIn">
+      <div className="cover-left-text animate__animated animate__fadeInLeft">
         Alimento
         <br />
         para
@@ -11,7 +11,7 @@ const Cover = () => {
         Mascotas
       </div>
       <div className="cover-image"></div>
-      <div className="cover-right-text">
+      <div className="cover-right-text animate__animated animate__fadeInRight">
         Perros
         <br />
         Gatos

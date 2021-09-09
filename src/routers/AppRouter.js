@@ -1,11 +1,19 @@
+import { useContext } from "react";
 import { HashRouter as Router } from "react-router-dom";
+
+import CoverLoading from "../components/Loading/cover";
 import Nav from "../components/app/Nav";
+
+import DataContext from "../context/DataContext";
 import Content from "../components/app/Content";
 
 import "../styles/app.scss";
 
-const PortfolioRouter = () => {
-  return (
+const AppRouter = () => {
+  const { loading } = useContext(DataContext);
+  return loading ? (
+    <CoverLoading />
+  ) : (
     <div className="app">
       <Router>
         <Nav />
@@ -15,4 +23,4 @@ const PortfolioRouter = () => {
   );
 };
 
-export default PortfolioRouter;
+export default AppRouter;

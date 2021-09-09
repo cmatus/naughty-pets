@@ -8,7 +8,7 @@ const Suscribe = () => {
         <input
           type="text"
           placeholder="Escribe tu correo"
-          autocomplete="off"
+          autoComplete="off"
         ></input>
         <button>Suscribirse</button>
       </div>
